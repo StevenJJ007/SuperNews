@@ -45,6 +45,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> implem
         holder.itemView.setTag(position);
         holder.tv_name.setText(list.get(position).getName());
         holder.tv_description.setText(list.get(position).getDescription());
+        //glide加载图片
         Glide.with(App.application).load(list.get(position).getPicSmall()).into(holder.icon);
     }
 
